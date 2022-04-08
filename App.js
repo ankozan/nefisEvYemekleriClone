@@ -10,6 +10,7 @@ import {
   Keyboard,
   ScrollView,
   Dimensions,
+  Image,
 } from "react-native";
 const DeviceWidth = Dimensions.get("window").width;
 
@@ -18,38 +19,96 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.header}>
         <TextInput style={styles.input} placeholder={"@  Ara"} />
-        <View style={styles.headerImage}>
-          <Text style={styles.headerImageText}>
-            IMAGE HERE IMAGE HERE IMAGE HERE IMAGE HERE
-          </Text>
-        </View>
+        <Image
+          style={styles.headerImage}
+          source={{
+            uri: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+          }}
+        />
+
         <View style={styles.menu}>
           <View style={styles.menuItems}>
             <View>
-              <View style={styles.menuItem} />
+              <View style={styles.menuItem}>
+                <Image
+                  style={styles.menuLogo}
+                  source={{
+                    uri: "https://reactnative.dev/img/tiny_logo.png",
+                  }}
+                />
+              </View>
             </View>
             <View>
-              <View style={styles.menuItem} />
+              <View style={styles.menuItem}>
+                <Image
+                  style={styles.menuLogo}
+                  source={{
+                    uri: "https://reactnative.dev/img/tiny_logo.png",
+                  }}
+                />
+              </View>
             </View>
             <View>
-              <View style={styles.menuItem} />
+              <View style={styles.menuItem}>
+                <Image
+                  style={styles.menuLogo}
+                  source={{
+                    uri: "https://reactnative.dev/img/tiny_logo.png",
+                  }}
+                />
+              </View>
             </View>
             <View>
-              <View style={styles.menuItem} />
+              <View style={styles.menuItem}>
+                <Image
+                  style={styles.menuLogo}
+                  source={{
+                    uri: "https://reactnative.dev/img/tiny_logo.png",
+                  }}
+                />
+              </View>
             </View>
           </View>
           <View style={styles.menuItems}>
             <View>
-              <View style={styles.menuItem} />
+              <View style={styles.menuItem}>
+                <Image
+                  style={styles.menuLogo}
+                  source={{
+                    uri: "https://reactnative.dev/img/tiny_logo.png",
+                  }}
+                />
+              </View>
             </View>
             <View>
-              <View style={styles.menuItem} />
+              <View style={styles.menuItem}>
+                <Image
+                  style={styles.menuLogo}
+                  source={{
+                    uri: "https://reactnative.dev/img/tiny_logo.png",
+                  }}
+                />
+              </View>
             </View>
             <View>
-              <View style={styles.menuItem} />
+              <View style={styles.menuItem}>
+                <Image
+                  style={styles.menuLogo}
+                  source={{
+                    uri: "https://reactnative.dev/img/tiny_logo.png",
+                  }}
+                />
+              </View>
             </View>
             <View>
-              <View style={styles.menuItem} />
+              <View style={styles.menuItem}>
+                <Image
+                  style={styles.menuLogo}
+                  source={{
+                    uri: "https://reactnative.dev/img/tiny_logo.png",
+                  }}
+                />
+              </View>
             </View>
           </View>
         </View>
@@ -97,9 +156,15 @@ const styles = StyleSheet.create({
     marginBottom: 1,
     marginLeft: 1,
     backgroundColor: "#cc2e38",
+    justifyContent: "center",
   },
   menuItems: {
     flexDirection: "row",
     backgroundColor: "orange",
+  },
+  menuLogo: {
+    marginLeft: 30,
+    width: 30,
+    height: 30,
   },
 });
