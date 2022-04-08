@@ -9,7 +9,9 @@ import {
   TouchableOpacity,
   Keyboard,
   ScrollView,
+  Dimensions,
 } from "react-native";
+const DeviceWidth = Dimensions.get("window").width;
 
 export default function App() {
   return (
@@ -20,6 +22,36 @@ export default function App() {
           <Text style={styles.headerImageText}>
             IMAGE HERE IMAGE HERE IMAGE HERE IMAGE HERE
           </Text>
+        </View>
+        <View style={styles.menu}>
+          <View style={styles.menuItems}>
+            <View>
+              <View style={styles.menuItem} />
+            </View>
+            <View>
+              <View style={styles.menuItem} />
+            </View>
+            <View>
+              <View style={styles.menuItem} />
+            </View>
+            <View>
+              <View style={styles.menuItem} />
+            </View>
+          </View>
+          <View style={styles.menuItems}>
+            <View>
+              <View style={styles.menuItem} />
+            </View>
+            <View>
+              <View style={styles.menuItem} />
+            </View>
+            <View>
+              <View style={styles.menuItem} />
+            </View>
+            <View>
+              <View style={styles.menuItem} />
+            </View>
+          </View>
         </View>
       </View>
     </View>
@@ -58,5 +90,16 @@ const styles = StyleSheet.create({
     marginTop: 70,
     alignContent: "center",
     justifyContent: "center",
+  },
+  menuItem: {
+    width: DeviceWidth * 0.25,
+    height: DeviceWidth * 0.2,
+    marginBottom: 1,
+    marginLeft: 1,
+    backgroundColor: "#cc2e38",
+  },
+  menuItems: {
+    flexDirection: "row",
+    backgroundColor: "orange",
   },
 });
