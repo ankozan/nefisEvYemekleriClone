@@ -12,7 +12,7 @@ import {
   Dimensions,
   Image,
 } from "react-native";
-const DeviceWidth = Dimensions.get("window").width;
+import MenuItem from "./components/MenuItem";
 
 export default function App() {
   return (
@@ -28,88 +28,16 @@ export default function App() {
 
         <View style={styles.menu}>
           <View style={styles.menuItems}>
-            <View>
-              <View style={styles.menuItem}>
-                <Image
-                  style={styles.menuLogo}
-                  source={{
-                    uri: "https://reactnative.dev/img/tiny_logo.png",
-                  }}
-                />
-              </View>
-            </View>
-            <View>
-              <View style={styles.menuItem}>
-                <Image
-                  style={styles.menuLogo}
-                  source={{
-                    uri: "https://reactnative.dev/img/tiny_logo.png",
-                  }}
-                />
-              </View>
-            </View>
-            <View>
-              <View style={styles.menuItem}>
-                <Image
-                  style={styles.menuLogo}
-                  source={{
-                    uri: "https://reactnative.dev/img/tiny_logo.png",
-                  }}
-                />
-              </View>
-            </View>
-            <View>
-              <View style={styles.menuItem}>
-                <Image
-                  style={styles.menuLogo}
-                  source={{
-                    uri: "https://reactnative.dev/img/tiny_logo.png",
-                  }}
-                />
-              </View>
-            </View>
+            <MenuItem text={"Videolar"} />
+            <MenuItem text={"Tarifler"} />
+            <MenuItem text={"Menuler"} />
+            <MenuItem text={"Trend"} />
           </View>
           <View style={styles.menuItems}>
-            <View>
-              <View style={styles.menuItem}>
-                <Image
-                  style={styles.menuLogo}
-                  source={{
-                    uri: "https://reactnative.dev/img/tiny_logo.png",
-                  }}
-                />
-              </View>
-            </View>
-            <View>
-              <View style={styles.menuItem}>
-                <Image
-                  style={styles.menuLogo}
-                  source={{
-                    uri: "https://reactnative.dev/img/tiny_logo.png",
-                  }}
-                />
-              </View>
-            </View>
-            <View>
-              <View style={styles.menuItem}>
-                <Image
-                  style={styles.menuLogo}
-                  source={{
-                    uri: "https://reactnative.dev/img/tiny_logo.png",
-                  }}
-                />
-              </View>
-            </View>
-            <View>
-              <View style={styles.menuItem}>
-                <Image
-                  style={styles.menuLogo}
-                  source={{
-                    uri: "https://reactnative.dev/img/tiny_logo.png",
-                  }}
-                />
-              </View>
-            </View>
+            <MenuItem text={"Iftar Menuleri"} />
+            <MenuItem text={"Puding Yarismasi"} />
+            <MenuItem text={"Blog"} />
+            <MenuItem text={"Bugun Ne Pisirsem"} />
           </View>
         </View>
       </View>
@@ -150,21 +78,9 @@ const styles = StyleSheet.create({
     alignContent: "center",
     justifyContent: "center",
   },
-  menuItem: {
-    width: DeviceWidth * 0.25,
-    height: DeviceWidth * 0.2,
-    marginBottom: 1,
-    marginLeft: 1,
-    backgroundColor: "#cc2e38",
-    justifyContent: "center",
-  },
+
   menuItems: {
     flexDirection: "row",
     backgroundColor: "orange",
-  },
-  menuLogo: {
-    marginLeft: 30,
-    width: 30,
-    height: 30,
   },
 });
